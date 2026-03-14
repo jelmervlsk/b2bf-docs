@@ -16,15 +16,14 @@ Book2befit is available in four tiers. All plans include the core booking and sc
 | Waitlists | ✓ | ✓ | ✓ | ✓ |
 | Payments (Stripe) | ✓ | ✓ | ✓ | ✓ |
 | Invoices & receipts | ✓ | ✓ | ✓ | ✓ |
-| Basic analytics | ✓ | ✓ | ✓ | ✓ |
 | **Team members** | Up to 3 | Unlimited | Unlimited | Unlimited |
 | **Recurring sessions** | — | ✓ | ✓ | ✓ |
 | **Products & memberships** | — | ✓ | ✓ | ✓ |
 | **Custom branding** | — | ✓ | ✓ | ✓ |
-| **Advanced analytics & reporting** | — | ✓ | ✓ | ✓ |
-| **Calendar export** | — | ✓ | ✓ | ✓ |
+| **Analytics** | — | ✓ | ✓ | ✓ |
+| **Advanced analytics** | — | — | ✓ | ✓ |
+| **Reporting** | — | — | — | ✓ |
 | **Priority support** | — | — | ✓ | ✓ |
-| **API access** | — | — | ✓ | ✓ |
 | **Custom contract & SLA** | — | — | — | ✓ |
 | **Dedicated onboarding** | — | — | — | ✓ |
 
@@ -34,11 +33,7 @@ Features locked to a higher tier show an upgrade prompt rather than an error. Fo
 
 - On **Starter**: the **+ Recurring Sessions** button is hidden on the Sessions page.
 - On **Starter**: navigating to `/products` shows an upgrade prompt instead of your product list.
-- On **Starter**: the **Branding** tab in Settings is not available.
-
-<Note>
-  Tier gates are enforced at the API level — not just in the UI. Calls to gated features from lower-tier accounts return a permissions error.
-</Note>
+- On **Starter**: the **Branding** tab in Location settings is not available.
 
 ## Changing your plan
 
@@ -49,7 +44,7 @@ Go to **Settings → Billing** to upgrade or downgrade your plan. Changes take e
 </Accordion>
 
 <Accordion title="What happens to my data if I downgrade?">
-  Your data is never deleted on a downgrade. Features locked to your previous tier become read-only — existing recurring sessions remain visible but you cannot create new ones until you upgrade again.
+  Your data is never deleted on a downgrade. Gated features simply show an upgrade prompt — you lose the ability to use them, but nothing is removed. If you're unsure what a downgrade affects, contact support before making the change.
 </Accordion>
 
 <Accordion title="Is annual billing available?">
