@@ -1,0 +1,85 @@
+---
+title: "Payments"
+description: "Accept online payments, manage invoices, and handle refunds — powered by Stripe."
+---
+
+Book2befit uses **Stripe** for all payment processing. You connect your own Stripe account so payouts go directly to you.
+
+## Connecting Stripe
+
+<Steps>
+  <Step title="Go to Settings → Payments">
+    Navigate to **Settings → Payments** in your dashboard.
+  </Step>
+  <Step title="Click Connect Stripe">
+    You'll be redirected to Stripe to create or connect an existing account.
+  </Step>
+  <Step title="Complete Stripe onboarding">
+    Fill in your business details, bank account, and identity verification on Stripe's side. This typically takes a few minutes.
+  </Step>
+  <Step title="Return to Book2befit">
+    Once connected, your Stripe status shows as **Active**. You can now accept online payments.
+  </Step>
+</Steps>
+
+<Note>
+  Until Stripe is connected, sessions can still be set to **At Location** payment only.
+</Note>
+
+## Payment methods
+
+When creating a priced session (price > €0), you choose how clients can pay:
+
+| Method | Description |
+|---|---|
+| **Online** | Client pays via Stripe when booking from the public page. Card, iDEAL, and other local methods depending on your Stripe settings. |
+| **At Location** | Client pays in person. No Stripe charge — you handle it manually. |
+
+Both options can be enabled on the same session.
+
+## Invoices
+
+Invoices are generated automatically for every completed online payment.
+
+- View all invoices under **Payments → Invoices**.
+- Download individual invoices as PDF.
+- Send invoices directly to a client's email from the invoice detail page.
+
+## Credit notes
+
+If a booking is refunded after an invoice has been issued, a credit note is generated automatically to balance the books. Find them under **Payments → Credit Notes**.
+
+## Refunds
+
+<Tabs>
+  <Tab title="Manual refund">
+    Open a booking or invoice, click **Refund**, and confirm the amount. The refund is processed via Stripe and typically lands in the client's account within 5–10 business days.
+  </Tab>
+  <Tab title="Auto-refund on cancellation">
+    Enable **Auto-refund on cancellation** in **Settings → Payments**. When you cancel a session, all paid bookings are refunded automatically.
+  </Tab>
+</Tabs>
+
+## Payment receipts
+
+Clients receive a payment receipt by email after every successful online transaction. You can also resend or download receipts from **Payments → Receipts**.
+
+## Disconnecting Stripe
+
+To disconnect Stripe, go to **Settings → Payments** and click **Disconnect**. Existing payment records are retained. New online payments will be paused until a new Stripe account is connected.
+
+<Warning>
+  Disconnecting Stripe does not cancel active client subscriptions. Cancel subscriptions before disconnecting to avoid failed charges.
+</Warning>
+
+<Accordion title="Which currencies are supported?">
+  Book2befit supports any currency that Stripe supports in your country. The currency is set at the organization level in **Settings**.
+</Accordion>
+
+<Accordion title="Are there transaction fees on top of Stripe's fees?">
+  No. Book2befit does not charge additional transaction fees. You pay Stripe's standard processing rates only.
+</Accordion>
+
+<Accordion title="What happens if a payment fails?">
+  Failed payments appear in your Payments dashboard with a failed status. For subscription products, Stripe retries the charge according to your Stripe retry settings.
+</Accordion>

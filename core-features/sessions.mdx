@@ -1,0 +1,97 @@
+---
+title: "Sessions & Scheduling"
+description: "Create and manage group classes, private sessions, and recurring schedules."
+---
+
+Sessions are the building blocks of your schedule. Each session is a single bookable class or appointment tied to an activity, a coach, a location, and a time.
+
+## Creating a session
+
+Go to **Sessions** in the dashboard and click **+ Create Session**.
+
+| Field | Description |
+|---|---|
+| Activity | The class type (e.g. HIIT, Pilates). Must exist in Activities first. |
+| Coach | The team member running the session. |
+| Location / Space | Where it takes place. Capacity is validated against the space limit. |
+| Date & Time | Start and end time. End time must be after start time. |
+| Capacity | Max number of bookings. Cannot exceed the space's capacity. |
+| Price | Set to 0 for free sessions. If a price is set, payment method options appear. |
+| Allow public booking | Toggle on to make it bookable from your public page. |
+
+<Tip>
+  Private activities are hidden from the public booking page — useful for 1:1 sessions you manage manually.
+</Tip>
+
+## Recurring sessions
+
+Instead of creating sessions one by one, use recurring sessions to generate a full schedule automatically.
+
+<Note>
+  Recurring sessions require the **Growth plan** or above. See [Plan Tiers](/reference/tiers).
+</Note>
+
+<Steps>
+  <Step title="Click + Recurring Sessions">
+    From the Sessions page, click **+ Recurring Sessions**.
+  </Step>
+  <Step title="Configure the schedule">
+    Choose your activity, location, coach, days of the week, start/end time, and date range.
+  </Step>
+  <Step title="Create">
+    Click **Create Recurring Sessions**. All matching sessions are generated at once.
+  </Step>
+</Steps>
+
+To update a recurring schedule later, expand any session in the series and click **Edit Schedule**. You can change days, times, or delete the entire series.
+
+## Waitlists
+
+When a session is full, clients can join the waitlist instead of being turned away.
+
+- From the dashboard: expand a full session and click **View Waitlist** to see who's waiting.
+- Click **Promote from Waitlist** to move the first client into a confirmed booking automatically.
+- From the public page: clients see a "Session is full" message with a **Join Waitlist** option.
+
+## Managing sessions
+
+<Tabs>
+  <Tab title="Edit">
+    Expand any session row and modify the activity, coach, date, capacity, or status. Click **Save Changes**.
+  </Tab>
+  <Tab title="Cancel">
+    Change the session status to **Cancelled** and save. Existing bookings are notified.
+  </Tab>
+  <Tab title="Delete">
+    Click **Delete** on a session row and confirm. To remove multiple at once, select sessions with checkboxes and click **Delete Selected**.
+  </Tab>
+  <Tab title="Export">
+    Click **Export Sessions CSV** to download your session list filtered by the current view.
+  </Tab>
+</Tabs>
+
+## Filtering and search
+
+Use the filter bar to narrow sessions by:
+- **Date** — Today · Upcoming · Past
+- **Status** — Scheduled · Cancelled · Completed
+- **Activity** or **Location**
+
+Use the search bar to find sessions by name.
+
+## Role permissions
+
+| Action | Owner | Admin | Coach |
+|---|---|---|---|
+| Create session | ✓ | ✓ | ✓ (if enabled in Settings) |
+| Edit session | ✓ | ✓ | ✓ (own sessions) |
+| Delete session | ✓ | ✓ | — |
+| Create recurring | ✓ | ✓ | — |
+
+<Accordion title="Can a coach create sessions?">
+  Yes, if the organization setting **Allow coaches to create sessions** is turned on in **Settings → Team**. Coaches cannot delete sessions.
+</Accordion>
+
+<Accordion title="What happens to bookings when I cancel a session?">
+  Existing bookings are marked as cancelled. If you have Stripe connected with **Auto-refund on cancellation** enabled, refunds are issued automatically.
+</Accordion>

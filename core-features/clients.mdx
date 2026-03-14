@@ -1,0 +1,79 @@
+---
+title: "Clients"
+description: "Manage your client list — profiles, booking history, invites, and duplicate merging."
+---
+
+The **Clients** section gives you a full view of everyone who has booked with your studio — their contact details, booking history, assigned products, and notes.
+
+## Adding a client
+
+There are two ways to get a client into your system:
+
+<Tabs>
+  <Tab title="Invite by email">
+    Go to **Clients** and click **+ Add Client**. Enter the client's email address. They'll receive an invitation email with a link to create their account on your public booking page.
+  </Tab>
+  <Tab title="Client self-registers">
+    When a client books through your public page for the first time, they create their own account. They appear in your Clients list automatically.
+  </Tab>
+</Tabs>
+
+## Client profile
+
+Each client profile shows:
+
+- **Contact details** — name, email, phone
+- **Booking history** — all past and upcoming sessions
+- **Products** — any memberships or packages assigned to them
+- **Notes** — internal notes visible only to your team
+
+### Assigning a product
+
+From a client's profile, click **Assign Product**. Select a product and pricing tier. This is used for memberships, class packs, or recurring subscriptions.
+
+<Note>
+  Products and memberships require the **Growth plan** or above. See [Plan Tiers](/reference/tiers).
+</Note>
+
+## Merging duplicates
+
+If a client appears twice (e.g. they used two different email addresses), you can merge them into a single profile.
+
+<Steps>
+  <Step title="Open the primary profile">
+    Navigate to the client you want to keep as the primary record.
+  </Step>
+  <Step title="Click Merge Client">
+    Use the **Merge** option from the client's action menu.
+  </Step>
+  <Step title="Select the duplicate">
+    Search for and select the duplicate profile. Booking history from both profiles is combined.
+  </Step>
+</Steps>
+
+<Warning>
+  Merging is irreversible. The secondary profile is deleted after the merge.
+</Warning>
+
+## Filtering and export
+
+Filter your client list by status (Active · Inactive) or search by name or email. Use **Export CSV** to download the full list.
+
+## Roles and access
+
+| Action | Owner | Admin | Coach |
+|---|---|---|---|
+| View clients | ✓ | ✓ | ✓ |
+| Add / invite client | ✓ | ✓ | — |
+| Edit profile & notes | ✓ | ✓ | — |
+| Merge duplicates | ✓ | ✓ | — |
+| Assign products | ✓ | ✓ | — |
+| Export CSV | ✓ | ✓ | — |
+
+<Accordion title="Can a client update their own details?">
+  Yes — clients can update their name, email, and password from their account page at `app.book2befit.com/[slug]/account`.
+</Accordion>
+
+<Accordion title="How do I remove a client?">
+  Client records are retained for billing and history purposes. You can mark them as inactive, which removes them from active lists without deleting their data.
+</Accordion>

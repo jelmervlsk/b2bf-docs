@@ -1,0 +1,76 @@
+---
+title: "Bookings"
+description: "Manage client bookings — from creation to check-in, cancellation, and waitlist promotion."
+---
+
+A booking connects a client to a session. Bookings can be created by you (from the dashboard) or by clients themselves (from the public booking page).
+
+## Creating a booking manually
+
+From the **Bookings** page or the **Dashboard**, click **+ Add Booking**.
+
+1. Select a session from the list.
+2. Enter the client's email address. The client must have an existing account.
+3. Optionally add internal notes.
+4. Click **Create Booking**.
+
+A confirmation email is sent to the client automatically.
+
+<Tip>
+  You can also add a booking directly from a session row — expand the session and use the booking panel there.
+</Tip>
+
+## Multi-seat bookings
+
+A single booking can cover multiple seats in a session — useful for couples, families, or group purchases.
+
+When creating a booking, set the **Number of seats** field. Each seat counts against the session's capacity.
+
+## Check-in
+
+Once a session is underway, mark clients as checked in from the Bookings page or the expanded session row.
+
+Checked-in and no-show data feeds into your **Analytics** dashboard (occupancy rate, no-show rate).
+
+## Cancellations
+
+<Tabs>
+  <Tab title="From the dashboard">
+    Find the booking in the **Bookings** list, open it, and click **Cancel Booking**. You can choose whether to issue a refund at the point of cancellation.
+  </Tab>
+  <Tab title="By the client">
+    Clients can cancel their own booking from the public portal at `app.book2befit.com/[slug]/booking/[id]/cancel`, up to any cancellation cutoff you set.
+  </Tab>
+</Tabs>
+
+### Auto-refund on cancellation
+
+To enable automatic refunds when a session is cancelled at the studio level, go to **Settings → Payments** and toggle **Auto-refund on cancellation** ON. Requires Stripe to be connected.
+
+## Waitlist promotion
+
+When you cancel a booking on a previously full session, the system can automatically promote the first client on the waitlist.
+
+- The promoted client receives a booking confirmation email.
+- Their waitlist entry is removed.
+- The session's `current_bookings` count is updated.
+
+## Filtering and export
+
+Filter bookings by session, client, status (Confirmed · Cancelled · Checked-in · No-show), or date range. Click **Export CSV** to download the current filtered view.
+
+## Confirmation emails
+
+Booking confirmation emails are sent automatically via Supabase Edge Functions. They include:
+
+- Session name, date, and time
+- Location address
+- A link to view or cancel the booking
+
+<Accordion title="Can I book a client who doesn't have an account?">
+  No — clients must have an existing account. To onboard a new client, use the **Invite** flow in the Clients section, or direct them to your public page to register.
+</Accordion>
+
+<Accordion title="What happens if I try to book a full session?">
+  You'll see a message that the session is full. You can add the client to the waitlist instead. From the dashboard, expand the session and click **View Waitlist** to manage it.
+</Accordion>
