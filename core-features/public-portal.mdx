@@ -1,6 +1,6 @@
 ---
 title: "Client Portal"
-description: "Your public booking page — what clients see, how they book, pay, and manage their schedule."
+description: "Your public booking page — fully branded with your logo and colors, and everything clients need to book, pay, and manage their schedule."
 ---
 
 Every Book2befit studio gets a public booking page at:
@@ -9,111 +9,113 @@ Every Book2befit studio gets a public booking page at:
 app.book2befit.com/[your-slug]
 ```
 
-Clients can browse sessions, book, pay online, manage their own bookings, and purchase memberships — no app to download, no login required to browse.
+Clients can browse sessions, book, pay, manage their bookings, and purchase memberships — no app to download, no login required to browse. And because the portal uses your logo, colors, and cover image, it feels like *your* product, not a third-party tool.
+
+## What clients see
+
+The public portal is made up of several sections, each controlled from **Location** settings:
+
+| Section | What it shows | Controlled by |
+|---|---|---|
+| **Header** | Your logo + navigation links | Logo uploaded in Location → Images |
+| **Hero** | Studio name / cover image banner | Cover image in Location → Images (overrides hero background color) |
+| **Schedule** | Upcoming bookable sessions with price, coach, and spots remaining | Sessions with "Allow public booking" ON |
+| **Gallery** | Studio photos | Gallery in Location → Images |
+| **Footer** | Contact info, social links | Location → Contact + Branding footer color |
+
+## Branding your portal
+
+Making the portal look like your brand takes less than 5 minutes. Here's the order to do it:
+
+<Steps>
+  <Step title="Upload your logo">
+    Go to **Location → Images** and upload your logo (recommended 600 × 200 px). It appears in the **header of every page** of the portal — booking, account, products, confirmation. This is the single biggest branding action you can take.
+  </Step>
+  <Step title="Upload a cover image">
+    Upload a cover image (recommended 1920 × 600 px). This replaces the plain hero section with a full-width photo of your studio. If no cover image is set, the hero background color from Branding is used instead.
+  </Step>
+  <Step title="Set your brand colors (Growth+)">
+    Go to **Location → Branding**. Set a background color and text color for the Header, Hero, Body, and Footer independently. Use your brand color in the header to make the portal immediately recognisable.
+  </Step>
+  <Step title="Add your gallery">
+    Upload up to 10 studio photos in Location → Images → Gallery. These build trust with prospective clients before they book.
+  </Step>
+</Steps>
+
+<Note>
+  Color branding requires the **Growth plan** or above. Logo, cover image, and gallery are available on all plans. See [Plan Tiers](/reference/tiers).
+</Note>
 
 ## What clients can do
 
 <Columns cols={2}>
   <Card title="Browse & book sessions" icon="calendar-check">
-    View all upcoming sessions with availability. Book with one click. Full sessions show a **Join Waitlist** option.
+    View all upcoming sessions with activity name, coach, time, price, and spots remaining. Book with one click. Full sessions show a **Join Waitlist** option.
   </Card>
   <Card title="Pay online" icon="credit-card">
-    Pay by card (or local payment methods via Stripe) at the time of booking.
+    Pay by card or local payment methods via Stripe at the time of booking. A confirmation email with a calendar invite is sent immediately.
   </Card>
   <Card title="Manage their bookings" icon="list-check">
-    View upcoming and past bookings, download calendar invites, and cancel within your cancellation policy.
+    View upcoming and past bookings, download calendar invites (.ics), and cancel within your cancellation window.
   </Card>
   <Card title="Buy memberships & packs" icon="tag">
-    Purchase products (class packs, memberships) directly from the public portal.
+    Purchase class packs and memberships directly from the portal (Growth+ required).
   </Card>
 </Columns>
-
-## Finding your public URL
-
-Your slug is set during onboarding. To find or copy your full public URL:
-
-1. Go to **Settings → Location**.
-2. Copy the **Public page** link.
-
-Share it anywhere — website, Instagram bio, WhatsApp, email signature.
 
 ## Booking flow (client perspective)
 
 <Steps>
   <Step title="Client visits your page">
-    They see a list of upcoming sessions with activity name, coach, time, location, price, and spots remaining.
+    They see your branded header with logo, cover image, and upcoming sessions below.
   </Step>
   <Step title="Client selects a session and clicks Book">
-    If they're not logged in, they're prompted to create a free account or sign in.
+    If not logged in, they're prompted to create a free account or sign in.
   </Step>
-  <Step title="Client pays (if session has a price)">
-    They complete payment via Stripe. A confirmation email is sent immediately.
+  <Step title="Client pays (if the session has a price)">
+    Payment is processed via Stripe. A confirmation email is sent immediately with session details and a calendar (.ics) attachment.
   </Step>
-  <Step title="Client receives confirmation">
-    The confirmation email includes session details, a calendar file attachment, and a link to cancel if needed.
+  <Step title="Client manages their booking">
+    They can view and cancel bookings from `app.book2befit.com/[slug]/my-bookings`.
   </Step>
 </Steps>
 
+## Public portal URLs
+
+| Page | URL |
+|---|---|
+| Main booking page | `app.book2befit.com/[slug]` |
+| Book a specific session | `app.book2befit.com/[slug]/book/[sessionId]` |
+| My bookings | `app.book2befit.com/[slug]/my-bookings` |
+| Waitlist | `app.book2befit.com/[slug]/waitlist` |
+| Products & memberships | `app.book2befit.com/[slug]/products` |
+| Client account | `app.book2befit.com/[slug]/account` |
+| Submit feedback | `app.book2befit.com/[slug]/feedback` |
+
 ## Waitlist
 
-When a session is full, clients see a **Join Waitlist** button. They enter their name, email, and phone number. When a spot opens up (via cancellation or manual promotion from your dashboard), they're automatically moved to a confirmed booking and notified.
-
-Clients can also join a waitlist directly at:
-
-```
-app.book2befit.com/[slug]/waitlist
-```
+When a session is full, clients see a **Join Waitlist** button. They enter their name, email, and phone. When a spot opens (via cancellation or manual promotion from your dashboard), they're moved to a confirmed booking and notified automatically.
 
 ## Calendar export
 
-Clients can export their bookings to Apple Calendar, Google Calendar, or any `.ics`-compatible app from their bookings page at:
+Clients can export their bookings to Apple Calendar, Google Calendar, or any `.ics`-compatible app from their bookings page. Your studio's session calendar can also be exported as an `.ics` feed.
 
-```
-app.book2befit.com/[slug]/my-bookings
-```
+## Finding your public URL
 
-Your studio's session calendar can also be exported as an `.ics` feed for coaches and clients to subscribe to.
-
-## Products on the public page
-
-If you have products enabled (Growth plan or above), clients can browse and purchase them at:
-
-```
-app.book2befit.com/[slug]/products
-```
-
-This includes one-time class packs, recurring memberships, and any other products you've published.
-
-<Note>
-  Products on the public portal require the **Growth plan** or above. See [Plan Tiers](/reference/tiers).
-</Note>
-
-## Client accounts
-
-Clients create their account on your public page — not through a separate app. Their account is scoped to your studio. They can update their profile at:
-
-```
-app.book2befit.com/[slug]/account
-```
-
-## Feedback
-
-After a session, clients can leave a star rating and comment. This appears in your **Feedback** dashboard and helps you track satisfaction over time.
-
-The feedback link is sent automatically in the post-session email:
-
-```
-app.book2befit.com/[slug]/feedback
-```
-
-<Accordion title="Can I customise the look of my public page?">
-  Yes — on the **Growth plan** and above, you can customise the header, hero text, and footer branding from **Settings → Branding**.
-</Accordion>
+Your slug is set during onboarding. To find it: go to **Location → General** and copy the **Public page** link. Share it anywhere — website, Instagram bio, WhatsApp, email signature.
 
 <Accordion title="Can clients book without creating an account?">
-  No — an account is required to complete a booking. Browsing sessions is public and requires no login.
+  No — an account is required to complete a booking. Browsing sessions is fully public and requires no login.
 </Accordion>
 
 <Accordion title="How do I hide a session from the public page?">
-  Toggle **Allow public booking** OFF on the session. The session remains in your dashboard but won't appear on the public booking page.
+  Toggle **Allow public booking** OFF on the session. The session stays in your dashboard but won't appear on the public booking page.
+</Accordion>
+
+<Accordion title="Can I use a custom domain for the portal?">
+  Custom domains are not available at this time. Your portal lives at `app.book2befit.com/[slug]`.
+</Accordion>
+
+<Accordion title="Can I customise the text on the public page?">
+  The header text and hero copy are set from the session and location data you enter. The page structure itself is fixed — color and image branding are the customisation levers available.
 </Accordion>

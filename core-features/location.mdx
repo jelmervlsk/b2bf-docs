@@ -1,73 +1,102 @@
 ---
 title: "Location"
-description: "Set up and manage your studio location — address, business hours, closures, and branding."
+description: "Set up your studio location — address, business hours, images, branding colors, and your public booking page."
 ---
 
-Your location is the physical place where sessions take place. It has its own address, business hours, closure dates, and public page settings.
+Your location is the physical place where sessions take place. It drives your public booking page and everything clients see when they visit it — from your logo in the header to the color of each section.
 
-Book2befit supports multiple locations on a single account — each with its own settings.
+Book2befit supports multiple locations on a single account, each with fully independent settings.
 
 ## Creating a location
 
-Go to **Location** in the dashboard and click **+ Add Location**. Enter a name and timezone, then click **Create Location**. You're taken directly to the location's settings tabs.
+Go to **Location** in the dashboard and click **+ Add Location**. Enter a name and timezone, then click **Create Location**. You're taken directly into the location's settings tabs.
 
 ## Location tabs
 
 ### General
 
-Set the display name and timezone. The timezone controls how session times are shown on the public booking page for clients in that area.
+Set the display name and timezone. The timezone controls how session times are displayed on the public booking page for clients in that area.
+
+Toggle **Public page** ON when your studio is ready to take bookings. Toggle it OFF to hide the page during setup or temporary closures without deleting the location.
 
 ### Address
 
-Enter your studio's address using the autocomplete search. The address appears on invoices and on the public booking page.
+Enter your studio's address using the autocomplete search — fields populate automatically from the selection. The address appears on invoices and on the public booking page.
 
 ### Business Hours
 
-Define when your studio is open each day of the week. Business hours are shown on the public page and used to validate session times — you can't schedule sessions outside of business hours.
-
-Toggle individual days off for days you're closed.
+Define when your studio is open each day of the week. Toggle individual days off for rest days or permanent closures.
 
 ### Closures
 
-Add specific closure dates — public holidays, annual shutdowns, or one-off closures. On closure dates, new sessions cannot be created and the public page shows the studio as closed.
+Add specific closure dates — public holidays, annual shutdowns, or one-off closures. Existing bookings on a closure date are not automatically cancelled.
 
 <Tip>
-  Add closures well in advance so clients aren't surprised by a locked booking page. Existing bookings on a closure date are not automatically cancelled.
+  Add closures well in advance so clients aren't surprised by a locked booking page.
 </Tip>
 
 ### Images
 
-Upload photos of your studio. These appear on your public booking page to give clients a feel for the space.
+<Note>
+  The Images tab is available on all plans.
+</Note>
+
+This is where you give your public booking page a professional, branded appearance. There are three distinct image slots:
+
+| Field | Recommended size | Where it appears |
+|---|---|---|
+| **Logo** | 600 × 200 px | Displayed in the **header** of your public booking page — the most prominent brand element clients see on every page |
+| **Cover Image** | 1920 × 600 px | Full-width banner in the **hero section**, below the header. Replaces the plain hero background color when set. |
+| **Gallery** | Any — up to 10 images | Shown in the **gallery section** of your public page to showcase your studio space |
+
+All images are resized automatically on upload. Supported formats: JPG, PNG, WebP.
+
+<Tip>
+  Your logo is the single most impactful thing you can upload. It appears in the top navigation bar on every page of your public portal — classes, booking, account, products — giving clients a consistently branded experience throughout.
+</Tip>
 
 ### Contact
 
-Add a public-facing phone number, email address, and website URL. Shown on the public booking page.
+Add public-facing contact details shown on your booking page:
+
+- Phone number
+- Email address
+- Website URL
+- Social media links (Instagram, Facebook, LinkedIn, Threads, TikTok)
 
 ### Branding
 
-Customise the look of your public booking page — header text, hero body copy, and footer message.
-
 <Note>
-  Branding customisation requires the **Growth plan** or above. See [Plan Tiers](/reference/tiers).
+  Branding color customisation requires the **Growth plan** or above. See [Plan Tiers](/reference/tiers).
 </Note>
 
-### Public Toggle
+The Branding tab lets you set the background color and text color for each section of your public page — so the entire portal matches your studio's visual identity.
 
-Control whether this location's public booking page is live. Toggle it OFF to hide the page without deleting the location — useful during setup or temporary closures.
+| Section | What it covers | Text color options |
+|---|---|---|
+| **Header** | Top navigation bar where the logo sits | Black or White |
+| **Hero** | The banner area with your studio name (only when no cover image is set) | Black or White |
+| **Body** | Main content area — schedule, session cards, services | Black or White |
+| **Footer** | Bottom section of the page | Black or White |
+
+Each section has an independent background color (chosen via color picker) and a text color toggle (Black or White). Leave a section empty to fall back to the default theme.
+
+**Example:** A dark navy header with white text + a light grey body with black text gives a premium, high-contrast feel without a developer.
 
 ## Multiple locations
 
-If you run more than one studio, add each as a separate location. Use the **location selector bar** at the top of the Location page to switch between them. Each location has its own:
+If you run more than one studio, add each as a separate location. Use the **location selector bar** at the top of the Location page to switch between them. Each location is fully independent:
 
-- Public booking page URL
-- Business hours and closure dates
-- Spaces and equipment
-- Branding settings
+- Its own public booking URL (`/[slug]`)
+- Its own business hours, closures, and contact details
+- Its own logo, cover image, and gallery
+- Its own branding colors
+- Its own spaces and equipment
 
 ## Deleting a location
 
 Click **Delete Location** at the bottom of the General tab and confirm. Sessions and bookings linked to that location are retained in your history.
 
 <Warning>
-  Deleting a location removes it from the location selector and makes its sessions no longer accessible from the public booking page. This cannot be undone.
+  Deleting a location removes it from the selector and makes its public page inaccessible. This cannot be undone.
 </Warning>
