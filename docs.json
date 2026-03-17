@@ -12,6 +12,20 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Homepage",
+          "icon": "house",
+          "href": "https://book2befit.com"
+        },
+        {
+          "anchor": "Support",
+          "icon": "envelope",
+          "href": "mailto:support@book2befit.com"
+        }
+      ]
+    },
     "tabs": [
       {
         "tab": "Getting Started",
@@ -79,30 +93,10 @@
               "reference/role-matrix",
               "reference/settings"
             ]
-          },
-          {
-            "group": "Data",
-            "pages": [
-              "reference/database-schema"
-            ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Homepage",
-          "href": "https://book2befit.com",
-          "icon": "house"
-        },
-        {
-          "anchor": "Support",
-          "href": "mailto:support@book2befit.com",
-          "icon": "envelope"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
